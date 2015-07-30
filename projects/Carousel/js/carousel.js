@@ -1,4 +1,8 @@
-var Carousel = {
+function Carousel($carousel){
+	this.$carousel = $carousel;
+	this.init();
+} 
+Carousel.prototype = {
 	init: function() {
 		this.attachEl();
 		this.bind();
@@ -6,7 +10,7 @@ var Carousel = {
 	},
 	// 保存DOM节点
 	attachEl: function() {
-		var $c = this.$c = $('.mod-carousel');
+		var $c = this.$c = this.$carousel;
 		this.$nav = $c.find('.nav');
 		this.$prev = $c.find('.prev');
 		this.$next = $c.find('.next');
@@ -109,4 +113,6 @@ var Carousel = {
 		this.$circles.removeClass('active').eq(idx).addClass('active');
 	}
 }
-Carousel.init();
+$('.mod-carousel').each(function() {
+	var obj = new Carousel($(this));
+});

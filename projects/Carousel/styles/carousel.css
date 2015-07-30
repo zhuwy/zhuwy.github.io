@@ -28,6 +28,17 @@
 	height:200px;
 }
 
+.mod-carousel .content span {
+	display: inline-block;
+	background-color: #a8a8a8;
+	color: #FFF;
+	font-size: 48px;
+	text-align: center;
+	line-height: 200px;
+	width: 400px;
+	height:200px;
+}
+
 .mod-carousel .nav{
 	position: absolute;
 	z-index: 100;
