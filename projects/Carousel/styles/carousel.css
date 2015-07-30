@@ -1,0 +1,71 @@
+.mod-carousel {
+	position: relative;
+	width: 400px;
+	margin: 40px auto;
+}
+.mod-carousel ul,.mod-carousel li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.mod-carousel .content{
+	position: relative;
+	width: 400px;
+	height:200px;
+	overflow: hidden;
+}
+.mod-carousel .content ul{
+	position: absolute;
+	left: 0;
+	z-index: :1;
+	width:1600px;
+}
+.mod-carousel .content li{
+	float: left;
+}
+.mod-carousel .content img {
+	width: 400px;
+	height:200px;
+}
+
+.mod-carousel .nav{
+	position: absolute;
+	z-index: 100;
+	right: 10px;
+	bottom: 10px;
+	background-color: rgba(220,220,220,0.5);
+	border-radius: 5px;
+}
+.mod-carousel .nav li {
+	float:left;
+}
+.mod-carousel .nav .circle{
+	display: block;
+	width:10px;
+	height:10px;
+	border-radius: 5px;
+    background-color: #fff;
+    margin: 4px 5px;
+}
+.mod-carousel .nav .circle.active{
+	background-color: #aaa;
+}
+.mod-carousel .buttons span{
+	position: absolute;
+	z-index: 100;
+	top:80px;
+	display:block;
+	width:20px;
+	height: 30px;
+	background-image: url(../images/arrow.png);
+	background-color: rgba(0,0,0,0.8);
+	cursor:pointer;
+}
+.mod-carousel .buttons span.prev{
+	left:10px;
+	background-position:0 0;
+}
+.mod-carousel .buttons span.next{
+	right:10px;
+	background-position: -30px;
+}
