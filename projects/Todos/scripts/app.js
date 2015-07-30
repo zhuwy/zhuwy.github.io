@@ -67,6 +67,17 @@ Todo.prototype.init = function() {
 			e.target.className += ' current';
 		}
 	},false);
+
+	// 清除所有完成状态
+	this.todoClear.addEventListener('click',function(e){
+		var items = _todo.items;
+		for(id in items){
+			if(!items[id].isActive){
+				var ele = items[id].ref;
+				_todo.remove(ele);
+			}
+		}
+	},false);
 };
 
 Todo.prototype.add = function(text) {
