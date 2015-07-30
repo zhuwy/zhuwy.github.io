@@ -1,12 +1,13 @@
 function Carousel($carousel){
 	this.$carousel = $carousel;
+	this.enableAutoPlay = null;
 	this.init();
 } 
 Carousel.prototype = {
 	init: function() {
 		this.attachEl();
 		this.bind();
-		this.autoPlay();
+		this.autoPlay(true);
 	},
 	// 保存DOM节点
 	attachEl: function() {
@@ -16,6 +17,7 @@ Carousel.prototype = {
 		this.$next = $c.find('.next');
 		this.$circles = $c.find('.circle');
 		this.$imgUl = $c.find('.content ul');
+		this.$autoPlaySwitch = $c.find('.autoPlaySwitch button');
 
 		this.imgWidth = this.$imgUl.find('li').outerWidth(true);
 		this.idx = 0;
@@ -49,9 +51,34 @@ Carousel.prototype = {
 				_carousel.goNext(desIdx - curIdx);
 			}
 		});
+		// 点击自动轮播开关
+		this.$autoPlaySwitch.on('click',function(){
+			//console.log('switch');
+			//console.log(_carousel.enableAutoPlay);
+			if(_carousel.enableAutoPlay){
+				_carousel.autoPlay(false);
+			}
+			else{
+				_carousel.autoPlay(true);
+			}
+		});
 
 	},
-	autoPlay: function() {},
+	autoPlay: function(enable) {
+		var _carousel = this;
+		if(enable){
+			this.enableAutoPlay = setInterval(function(){
+				_carousel.goNext();
+			},2000);
+		}
+		else {
+			if(this.enableAutoPlay){
+				clearInterval(this.enableAutoPlay);
+				this.enableAutoPlay = null;
+			}
+		}
+		
+	},
 	goPrev: function(i) {
 		//console.log('goPrev');
 		// i== 1：把最后一张图片放到最前面，然后整体右移i个图片宽度
