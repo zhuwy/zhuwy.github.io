@@ -1,0 +1,20 @@
+ul,li{
+	list-style: none;
+}
+.container:after {
+	content: "";
+	clear:both;
+	display: table;
+}
+.container {
+	width: 950px;
+	margin: 0 auto;
+}
+.container li {
+	float: left;
+	margin: 10px 10px;
+}
+.footer {
+	height: 30px;
+	background-color: orange;
+}

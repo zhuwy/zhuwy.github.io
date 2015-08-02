@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="lazyload.css">
+	</head>
+	<body>
+		<ul class="container">
+			<li><a href="javascript:void(0)"><img src="./images/loading.gif" data-src="./images/masami.jpg"></a></li>
+			<li><a href="javascript:void(0)"><img src="./images/loading.gif" data-src="./images/masami.jpg"></a></li>
+			<li><a href="javascript:void(0)"><img src="./images/loading.gif" data-src="./images/masami.jpg"></a></li>
+			<li><a href="javascript:void(0)"><img src="./images/loading.gif" data-src="./images/masami.jpg"></a></li>
+			<li><a href="javascript:void(0)"><img src="./images/loading.gif" data-src="./images/masami.jpg"></a></li>
+			<li><a href="javascript:void(0)"><img src="./images/loading.gif" data-src="./images/masami.jpg"></a></li>
+			<li><a href="javascript:void(0)"><img src="./images/loading.gif" data-src="./images/masami.jpg"></a></li>
+			<li><a href="javascript:void(0)"><img src="./images/loading.gif" data-src="./images/masami.jpg"></a></li>
+			<li><a href="javascript:void(0)"><img src="./images/loading.gif" data-src="./images/masami.jpg"></a></li>
+			<li><a href="javascript:void(0)"><img src="./images/loading.gif" data-src="./images/masami.jpg"></a></li>
+			<li><a href="javascript:void(0)"><img src="./images/loading.gif" data-src="./images/masami.jpg"></a></li>
+			<li><a href="javascript:void(0)"><img src="./images/loading.gif" data-src="./images/masami.jpg"></a></li>
+		</ul>
+		<div class="footer">
+			
+		</div>
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="lazyload.js"></script>
+		<!-- <script type="text/javascript">
+		$(window).on('scroll', function(){
+		checkShow();
+		});
+		checkShow();
+		function checkShow(){
+		$('.container img').each(function(){
+			var $cur = $(this);
+			if(isShow($cur)){
+				setTimeout(function(){
+					showImg($cur);
+				}, 500);
+				
+			}
+		});
+		}
+		function isShow(el){
+		var scrollH = $(window).scrollTop(),
+		winH = $(window).height(),
+		top = el.offset().top;
+		if(top < winH + scrollH){
+		return true;
+		}else{
+		return false;
+		}
+		}
+		function showImg($el){
+		$el.attr('src', $el.attr('data-src'));
+		}
+		</script>-->
+	</body>
+</html>
