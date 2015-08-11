@@ -1,0 +1,104 @@
+.main {
+	width: 812px;
+	height: 812px;
+	margin: 40px auto;
+	position: relative;
+	border: solid 1px black;
+	overflow: hidden;
+}
+.container {
+	position: absolute;
+	/*border: solid 1px black;*/
+	overflow: hidden;
+	background-color: #888;
+}
+.center-container {
+	width: 300px;
+	height: 300px;
+	left: 256px;
+	top: 256px;
+}
+.top-container {
+	top:0;
+	left: 256px;
+	right: 256px;
+	height: 240px;
+	/*width: 300px;*/
+}
+.right-container {
+	top:256px;
+	bottom: 256px;
+	right: 0;
+	width: 240px;
+}
+.bottom-container {
+	left: 256px;
+	right:256px;
+	bottom: 0;
+	height: 240px;
+}
+.left-container {
+	top:256px;
+	bottom: 256px;
+	left:0;
+	width: 240px;
+}
+
+.top-arrow-container{
+	width: 300px;
+	height: 16px;
+	position: absolute;
+	left: 256px;
+	top:240px;
+	/*background-color: black;*/
+}
+.right-arrow-container{
+	width: 16px;
+	height: 300px;
+	position: absolute;
+	top: 256px;
+	right: 240px;
+	/*background-color: black;*/
+}
+.bottom-arrow-container{
+	width: 300px;
+	height: 16px;
+	position: absolute;
+	left: 256px;
+	bottom:240px;
+	/*background-color: black;*/
+}
+.left-arrow-container{
+	width: 16px;
+	height: 300px;
+	position: absolute;
+	top: 256px;
+	left: 240px;
+	/*background-color: black;*/
+}
+.cell {
+	width: 80px;
+	height: 80px;
+	border:solid 1px #DDD;
+	/*float: left;*/
+	position: absolute;
+	background-color: red;
+	text-align: center;
+	line-height: 80px;
+	font-size: 80px;
+}
+
+.arrow {
+	position: absolute;
+	width: 16px;
+	height: 32px;
+	cursor: pointer;
+}
+.arrow-right {
+
+	background-image: url(rightleft2red.png);
+	background-position: -16px 0
+}
+.arrow-left {
+	background-image: url(rightleft2red.png);
+}
