@@ -1,0 +1,136 @@
+.main {
+  width: 512px;
+  height: 512px;
+  margin: 40px auto;
+  position: relative;
+  border: solid 1px black;
+  overflow: hidden;
+}
+.leftbar {
+  float: left;
+  width: 20%;
+  height: 512px;
+  border: solid 1px black;
+}
+.leftbar .refresh {
+  width: 100px;
+  height: 50px;
+  background-color: black;
+  border-radius: 20px;
+  color: #FFF;
+  line-height: 50px;
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+}
+.leftbar .refresh:hover {
+  background-color: #DDD;
+  color: #000;
+}
+.leftbar .step-board {
+  width: 100px;
+  height: 50px;
+  background-color: black;
+  border-radius: 20px;
+  color: #FFF;
+  line-height: 50px;
+  font-size: 20px;
+  margin: 200px auto;
+  text-align: center;
+}
+.container {
+  position: absolute;
+  /*border: solid 1px black;*/
+  overflow: hidden;
+  background-color: #888;
+}
+.center-container {
+  width: 300px;
+  height: 300px;
+  left: 106px;
+  top: 106px;
+  /**/
+}
+.top-container {
+  top: 0;
+  left: 106px;
+  right: 106px;
+  height: 90px;
+}
+.right-container {
+  top: 106px;
+  bottom: 106px;
+  right: 0;
+  width: 90px;
+}
+.bottom-container {
+  bottom: 0;
+  left: 106px;
+  right: 106px;
+  height: 90px;
+}
+.left-container {
+  top: 106px;
+  bottom: 106px;
+  left: 0;
+  width: 90px;
+}
+.top-arrow-container {
+  width: 300px;
+  height: 16px;
+  position: absolute;
+  left: 256px;
+  top: 240px;
+  /*background-color: black;*/
+}
+.right-arrow-container {
+  width: 16px;
+  height: 300px;
+  position: absolute;
+  top: 106px;
+  right: 90px;
+  /*background-color: black;*/
+}
+.bottom-arrow-container {
+  width: 300px;
+  height: 16px;
+  position: absolute;
+  left: 106px;
+  bottom: 90px;
+  /*background-color: black;*/
+}
+.left-arrow-container {
+  width: 16px;
+  height: 300px;
+  position: absolute;
+  top: 256px;
+  left: 240px;
+  /*background-color: black;*/
+}
+.arrow {
+  position: absolute;
+  cursor: pointer;
+}
+.arrow-right {
+  width: 16px;
+  height: 32px;
+  background-image: url(rightleft2red.png);
+  background-position: -16px 0;
+}
+.arrow-left {
+  width: 16px;
+  height: 32px;
+  background-image: url(rightleft2red.png);
+}
+.arrow-up {
+  width: 32px;
+  height: 16px;
+  background-image: url(updown-arrow.jpg);
+}
+.arrow-down {
+  width: 32px;
+  height: 16px;
+  background-image: url(updown-arrow.jpg);
+  background-position: 0 -16px;
+}

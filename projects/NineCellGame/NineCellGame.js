@@ -1,7 +1,7 @@
 var NineCellGame = (function(){
 	var row_num = 3,col_num = 3,
         current_step = 0,total_step = 20,
-		cell_width = 80,cell_height = 80,
+		cell_width = 30,cell_height = 30,
 		center_cell_width = 100,center_cell_height = 100,
         shiftTime = 1000,
         isMoving = false,colorSet,
@@ -65,15 +65,15 @@ var NineCellGame = (function(){
 
         $newLeftCell.css({
             "background-color": direction == 'left' ? $oldCenterCell.css("background-color") : $oldRightCell.css("background-color"),
-            "left": direction == 'left' ? 240 : -80
+            "left": direction == 'left' ? col_num*cell_width : -1*cell_width
         });
         $newCenterCell.css({
             "background-color": direction == 'left' ? $oldRightCell.css("background-color") : $oldLeftCell.css("background-color"),
-            "left": direction == 'left' ? 300 : -100
+            "left": direction == 'left' ? col_num*center_cell_width : -1*center_cell_width
         });
         $newRightCell.css({
             "background-color": direction == 'left' ? $oldLeftCell.css("background-color") : $oldCenterCell.css("background-color"),
-            "left": direction == 'left' ? 240 : -80
+            "left": direction == 'left' ? col_num*cell_width : -1*cell_width
         });
         $('.left-container').append($newLeftCell);
         $('.center-container').append($newCenterCell);
@@ -81,18 +81,18 @@ var NineCellGame = (function(){
 
         $('.left-container .'+rowClass).animate(
             {
-                left: direction == 'left' ? "-=80" : "+=80"
+                left: direction == 'left' ? "-="+cell_width : "+="+cell_width
             },shiftTime,function(){
                 $oldLeftCell.remove();
                 isMoving = false;
         });
         $('.center-container .' + rowClass).animate({
-            left: direction == 'left' ? "-=100" : "+=100"
+            left: direction == 'left' ? "-="+center_cell_width : "+="+center_cell_width
         }, shiftTime, function() {
             $oldCenterCell.remove();
         });
         $('.right-container .' + rowClass).animate({
-            left: direction == 'left' ? "-=80" : "+=80"
+            left: direction == 'left' ? "-="+cell_width : "+="+cell_width
         }, shiftTime, function() {
             $oldRightCell.remove();
             // if (isGameFinished()) {
@@ -152,33 +152,33 @@ var NineCellGame = (function(){
 
         $newTopCell.css({
             "background-color": direction == 'up' ? $oldCenterCell.css("background-color") : $oldBottomCell.css("background-color"),
-            "top": direction == 'up' ? 240 : -80
+            "top": direction == 'up' ? 3*cell_height : -1*cell_height
         });
         $newCenterCell.css({
             "background-color": direction == 'up' ? $oldBottomCell.css("background-color") : $oldTopCell.css("background-color"),
-            "top": direction == 'up' ? 300 : -100
+            "top": direction == 'up' ? 3*center_cell_height : -1*center_cell_height
         });
         $newBottomCell.css({
             "background-color": direction == 'up' ? $oldTopCell.css("background-color") : $oldCenterCell.css("background-color"),
-            "top": direction == 'up' ? 240 : -80
+            "top": direction == 'up' ? 3*cell_height : -1*cell_height
         });
         $('.top-container').append($newTopCell);
         $('.center-container').append($newCenterCell);
         $('.bottom-container').append($newBottomCell);
 
         $('.top-container .'+colClass).animate({
-            top: direction == 'up' ? "-=80" : "+=80"
+            top: direction == 'up' ? "-="+cell_height : "+="+cell_height
         },shiftTime,function(){
             $oldTopCell.remove();
             isMoving = false;
         });
         $('.center-container .'+colClass).animate({
-            top: direction == 'up' ? "-=100" : "+=100"
+            top: direction == 'up' ? "-="+center_cell_height : "+="+center_cell_height
         },shiftTime,function(){
             $oldCenterCell.remove();
         });
         $('.bottom-container .'+colClass).animate({
-            top: direction == 'up' ? "-=80" : "+=80"
+            top: direction == 'up' ? "-="+cell_height : "+="+cell_height
         },shiftTime,function(){
             $oldBottomCell.remove();
             // if(isGameFinished()){console.log("Success");}
