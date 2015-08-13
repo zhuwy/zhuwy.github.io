@@ -6,6 +6,41 @@
 	border: solid 1px black;
 	overflow: hidden;
 }
+.leftbar{
+	float: left;
+	width: 20%;
+	height: 812px;
+	border:solid 1px black;
+
+}
+.leftbar .refresh {
+	width: 100px;
+	height: 50px;
+	background-color: black;
+	border-radius: 20px;
+	color: #FFF;
+	line-height: 50px;
+	font-size: 20px;
+	margin: 0 auto;
+	text-align: center;
+	cursor: pointer;
+}
+.leftbar .refresh:hover {
+	background-color: #DDD;
+	color: #000;
+}
+.leftbar .step-board{
+	width: 100px;
+	height: 50px;
+	background-color: black;
+	border-radius: 20px;
+	color: #FFF;
+	line-height: 50px;
+	font-size: 20px;
+	margin: 200px auto;
+	text-align: center;
+}
+
 .container {
 	position: absolute;
 	/*border: solid 1px black;*/
@@ -77,28 +112,33 @@
 	/*background-color: black;*/
 }
 .cell {
-	width: 80px;
-	height: 80px;
-	border:solid 1px #DDD;
-	/*float: left;*/
-	position: absolute;
-	background-color: red;
-	text-align: center;
-	line-height: 80px;
-	font-size: 80px;
+
 }
 
 .arrow {
 	position: absolute;
-	width: 16px;
-	height: 32px;
 	cursor: pointer;
 }
 .arrow-right {
-
+	width: 16px;
+	height: 32px;
 	background-image: url(rightleft2red.png);
 	background-position: -16px 0
 }
 .arrow-left {
+	width: 16px;
+	height: 32px;
 	background-image: url(rightleft2red.png);
+}
+
+.arrow-up {
+	width: 32px;
+	height: 16px;
+	background-image: url(updown-arrow.jpg);
+}
+.arrow-down {
+	width: 32px;
+	height: 16px;
+	background-image: url(updown-arrow.jpg);
+	background-position: 0 -16px
 }
