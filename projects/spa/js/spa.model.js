@@ -124,7 +124,7 @@ spa.model = (function() {
 			is_removed = removePerson(user);
 			stateMap.user = stateMap.anon_user;
 
-			$gevent.publish('spa-logout', [user]);
+			$.gevent.publish('spa-logout', [user]);
 			return is_removed;
 		};
 		get_cid_map = function() {
