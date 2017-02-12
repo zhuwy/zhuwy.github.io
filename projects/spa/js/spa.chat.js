@@ -269,7 +269,9 @@ spa.chat = (function(){
 			people_db = configMap.people_model.get_db(),
 			chatee = configMap.chat_model.get_chatee();
 
+
 		people_db().each(function(person, idx){
+			console.log(person);
 			var select_class = '';
 			if(person.get_is_anon() || person.get_is_user()) {return true;}
 

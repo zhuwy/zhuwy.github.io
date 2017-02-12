@@ -26,6 +26,7 @@ var NineCellGame = (function(){
     };
 
     checkGameFinished = function(){
+        console.log("run check");
         var flag = true;
         var $center_cell = $('.center-cell');
         var color = $('.center-cell.row-1.col-1').css("background-color");

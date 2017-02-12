@@ -43,4 +43,11 @@ spa.util_b = (function() {
 			getComputedStyle(elem, '').fontSize.match(/\d*\.?\d*/)[0]
 		);
 	};
+
+	return {
+	    decodeHtml : decodeHtml,
+	    encodeHtml : encodeHtml,
+	    getEmSize  : getEmSize
+  };
+	
 }());
